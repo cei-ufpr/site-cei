@@ -8,30 +8,44 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <%= render 'shared/header' %>
-  <%#= yield %>
+  <!-- facebook sdk -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.4&appId=192421227485378";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
-  <main class="mdl-layout__content">
-    <section class="mdl-layout__tab-panel is-active" id="historia">
-      <div class="page-content"><%= render 'welcome/history' %></div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="eventos">
-      <div class="page-content"><%= render 'welcome/events' %></div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="gestao">
-      <div class="page-content"><%= render 'welcome/management' %></div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="contato">
-      <div class="page-content"><%= render 'welcome/contact' %></div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="calendario">
-      <div class="page-content"><%= render 'welcome/schedule' %></div>
-    </section>
-  </main>
-</div>
+  <!-- page -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <%= render 'shared/header' %>
+    <%#= yield %>
 
-<a href="https://github.com/cei-ufpr/site-cei/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Ver
-  código fonte</a>
+    <main class="mdl-layout__content">
+      <section class="mdl-layout__tab-panel is-active" id="info">
+        <div class="page-content"><%= render 'welcome/info' %></div>
+      </section>
+      <section class="mdl-layout__tab-panel" id="historia">
+        <div class="page-content"><%= render 'welcome/history' %></div>
+      </section>
+      <section class="mdl-layout__tab-panel" id="eventos">
+        <div class="page-content"><%= render 'welcome/events' %></div>
+      </section>
+      <section class="mdl-layout__tab-panel" id="gestao">
+        <div class="page-content"><%= render 'welcome/management' %></div>
+      </section>
+      <section class="mdl-layout__tab-panel" id="contato">
+        <div class="page-content"><%= render 'welcome/contact' %></div>
+      </section>
+      <section class="mdl-layout__tab-panel" id="calendario">
+        <div class="page-content"><%= render 'welcome/schedule' %></div>
+      </section>
+    </main>
+  </div>
+
+  <a href="https://github.com/cei-ufpr/site-cei/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Ver
+    código fonte</a>
 </body>
 </html>
