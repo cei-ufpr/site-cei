@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SiteCei</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title>Centro de Estudos de Informática</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <%= render 'shared/header' %>
+  <%= yield %>
+  <%= render 'shared/footer' %>
+</div>
 
-<%= yield %>
-
+<a href="https://github.com/cei-ufpr/site-cei/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Ver
+  código fonte</a>
 </body>
 </html>
