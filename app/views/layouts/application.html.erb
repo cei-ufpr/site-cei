@@ -10,8 +10,25 @@
 <body>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <%= render 'shared/header' %>
-  <%= yield %>
-  <%= render 'shared/footer' %>
+  <%#= yield %>
+
+  <main class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel is-active" id="historia">
+      <div class="page-content"><%= render 'welcome/history' %></div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="eventos">
+      <div class="page-content"><%= render 'welcome/events' %></div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="gestao">
+      <div class="page-content"><%= render 'welcome/management' %></div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="contato">
+      <div class="page-content"><%= render 'welcome/contact' %></div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="calendario">
+      <div class="page-content"><%= render 'welcome/schedule' %></div>
+    </section>
+  </main>
 </div>
 
 <a href="https://github.com/cei-ufpr/site-cei/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Ver

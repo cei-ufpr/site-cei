@@ -1,22 +1,17 @@
-<div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+<header class="mdl-layout__header">
   <div class="mdl-layout__header-row">
-          <span class="android-title mdl-layout-title">
-            <%= image_tag 'logo_cei_400x400.png', class: 'android-logo-image' %>
-          </span>
-    <!-- Add spacer, to align navigation to the right in desktop -->
-    <div class="android-header-spacer mdl-layout-spacer"></div>
-    <!-- Navigation -->
-    <div class="android-navigation-container">
-      <nav class="android-navigation mdl-navigation">
-        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">História</a>
-        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Eventos</a>
-        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Gestão</a>
-        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Fale conosco</a>
-        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Calendário Acadêmico</a>
-      </nav>
-    </div>
-          <span class="android-mobile-title mdl-layout-title">
-            <%= image_tag 'logo_cei_400x400.png', class: 'android-logo-image' %>
-          </span>
+    <!-- Title -->
+    <%= image_tag 'logo.png', width: '50px', height: '50px', style: 'margin-left: -70px;margin-right: 20px;' %>
+    <span class="mdl-layout-title">
+      Centro de Estudos de Informática - UFPR
+    </span>
   </div>
-</div>
+  <!-- Tabs -->
+  <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+    <a href="#historia" class="mdl-layout__tab is-active">História</a>
+    <a href="#eventos" class="mdl-layout__tab">Eventos</a>
+    <a href="#gestao" class="mdl-layout__tab">Gestão</a>
+    <a href="#contato" class="mdl-layout__tab">Contato</a>
+    <a href="#calendario" class="mdl-layout__tab">Calendário Acadêmico</a>
+  </div>
+</header>
