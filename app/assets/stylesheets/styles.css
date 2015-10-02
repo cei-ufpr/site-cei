@@ -14,17 +14,6 @@
  * limitations under the License.
  */
 
-@font-face {
-  font-family: "And Black";
-  src: url("myfont-webfont.eot?#iefix") format('embedded-opentype'),
-       url("fonts/and_black.woff") format('woff'),
-       url("fonts/and_black.ttf") format('truetype');
-}
-
-body {
-  margin: 0;
-}
-
 /* Disable ugly boxes around images in IE10 */
 a img{
   border: 0px;
