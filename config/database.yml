@@ -81,7 +81,11 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: site-cei_production
-  username: site-cei
-  password: <%= ENV['SITE-CEI_DATABASE_PASSWORD'] %>
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+  database: db/production.sqlite3
+  # <<: *default
+  # database: site-cei_production
+  # username: site-cei
+  # password: <%= ENV['SITE-CEI_DATABASE_PASSWORD'] %>
